@@ -6,7 +6,7 @@ const questions = []
 
 // TODO: Create a function to write README file
 const promptUser = () => {
-  inquirer.prompt([
+   return inquirer.prompt([
     {
       type: 'input',
       name: 'title',
@@ -31,12 +31,12 @@ const promptUser = () => {
       type: 'checkbox',
       name: 'license',
       message: 'What type of license did you use for this project?',
+      choices: ['MIT', 'GNU GPLv3', 'Mozilla Public', 'Boost Software'],
     },
     {
       type: 'input',
       name: 'contributing',
       message: 'What are some guidelines for how others can contribute?',
-      choices: ['MIT', 'GNU GPLv3', 'Mozilla Public', 'Boost Software']
     },
     {
       type: 'input',
@@ -47,6 +47,11 @@ const promptUser = () => {
       type: 'input',
       name: 'gitHubLink',
       message: 'Enter the link for your GitHub profile:',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Please enter your email address',
     },
   ]);
 };
